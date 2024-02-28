@@ -1,4 +1,7 @@
-const INK = '#000';
+// ink color variables and functions
+let inkColor = '#000';
+const getInkColor = () => inkColor;
+const setInkColor = (value) => inkColor = value;
 
 const gridContainer = document.querySelector('.js-grid-container');
 
@@ -17,6 +20,15 @@ window.addEventListener('mouseup', (e) => {
   isMouseDown = false;
 })
 
+// Toolbar
+
+// Ink Color Tool
+const inkColorTool = document.querySelector('.ink-color-tool')
+inkColorTool.addEventListener('change', (e) => {
+  console.log(e.target.value)
+  setInkColor(e.target.value);
+})
+
 const createCell = () => {
   const cell = document.createElement('div');
   cell.classList.add('grid-cell');
@@ -31,10 +43,10 @@ const createCell = () => {
 
   // listeners for inking
   cell.addEventListener('click', (e) => {
-    e.target.style.backgroundColor = INK;
+    e.target.style.backgroundColor = getInkColor();
   })
   cell.addEventListener('mouseover', (e) => {
-    if (isMouseDown) e.target.style.backgroundColor = INK;
+    if (isMouseDown) e.target.style.backgroundColor = getInkColor();
   })
 
   return cell;
