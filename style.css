@@ -1,0 +1,70 @@
+/* ========== RESET ========== */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== RESET END ========== */
+
+body {
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+/* ========== LAYOUT ========== */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 16px;
+  border-bottom: 0.1px solid #e5e7eb22;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  padding: 8px;
+  border-top: 0.1px solid #e5e7eb22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========== LAYOUT END ========== */
+
+
+/* ========== COMPONENTS ========== */
+
+/* ===== Logo Component ===== */
+.logo {
+  font-size: 36px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+/* ===== Link Component ===== */
+.text-link {
+  color: #ffa500;
+}
+
+/* ========== COMPONENTS END ========== */
