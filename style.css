@@ -67,4 +67,25 @@ body {
   color: #ffa500;
 }
 
+/* ===== Grid Component ===== */
+.grid-container {
+  width: min(500px, 100vw - 32px);
+  aspect-ratio: 1 / 1;
+  border: 1px solid #e5e7eb6a;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-row {
+  flex: 1;
+
+  display: flex;
+}
+
+.grid-cell {
+  flex: 1;
+  border: 0.1px solid #e5e7eb22;
+}
+
 /* ========== COMPONENTS END ========== */
