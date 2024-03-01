@@ -123,4 +123,21 @@ body {
   gap: 8px;
 }
 
+/* ===== Button Component ===== */
+.btn {
+  display: block;
+  padding: 4px 16px;
+  border-radius: 16px;
+  border: transparent;
+
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: #81f6fa;
+  color: #000000;
+}
+
 /* ========== COMPONENTS END ========== */
