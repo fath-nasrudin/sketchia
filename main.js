@@ -46,7 +46,7 @@ const createCell = () => {
     e.target.style.backgroundColor = getInkColor();
   })
   cell.addEventListener('pointerover', (e) => {
-    if (isMouseDown) e.target.style.backgroundColor = getInkColor();
+    if (isPointerDown) e.target.style.backgroundColor = getInkColor();
   })
 
   return cell;
