@@ -42,10 +42,10 @@ const createCell = () => {
   })
 
   // listeners for inking
-  cell.addEventListener('click', (e) => {
+  cell.addEventListener('pointerdown', (e) => {
     e.target.style.backgroundColor = getInkColor();
   })
-  cell.addEventListener('mouseover', (e) => {
+  cell.addEventListener('pointerover', (e) => {
     if (isMouseDown) e.target.style.backgroundColor = getInkColor();
   })
 
