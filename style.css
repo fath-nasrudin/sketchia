@@ -154,6 +154,15 @@ body {
   color: #000000;
 }
 
+/* ===== Message box Component ===== */
+.box-danger--outlined {
+  padding: 16px;
+  max-width: fit-content;
+  border: 1px solid rgb(251, 98, 98);
+  border-radius: 16px;
+  color: rgb(255, 93, 93);
+}
+
 /* ========== COMPONENTS END ========== */
 
 /* ========== UTILITIES ========== */
