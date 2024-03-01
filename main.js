@@ -10,6 +10,10 @@ const render = (parent, children) => {
   parent.append(...children);
 }
 
+const uiClearContent = (node) => {
+  node.textContent = '';
+}
+
 // tracking mouse up and down
 // sketch happen when the mouse is down and the cursor hovered the cells
 let isPointerDown = false;
