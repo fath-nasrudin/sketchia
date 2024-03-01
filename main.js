@@ -12,12 +12,12 @@ const render = (parent, children) => {
 
 // tracking mouse up and down
 // sketch happen when the mouse is down and the cursor hovered the cells
-let isMouseDown = false;
-window.addEventListener('mousedown', (e) => {
-  isMouseDown = true;
+let isPointerDown = false;
+window.addEventListener('pointerdown', (e) => {
+  isPointerDown = true;
 })
-window.addEventListener('mouseup', (e) => {
-  isMouseDown = false;
+window.addEventListener('pointerup', (e) => {
+  isPointerDown = false;
 })
 
 // Toolbar
