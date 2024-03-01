@@ -3,6 +3,11 @@ let inkColor = '#000';
 const getInkColor = () => inkColor;
 const setInkColor = (value) => inkColor = value;
 
+// resizer variables and functions
+let gridSize = 16;
+const getSize = () => gridSize;
+const setSize = (value) => gridSize = value;
+
 const gridContainer = document.querySelector('.js-grid-container');
 
 // Helpers
@@ -31,6 +36,25 @@ const inkColorTool = document.querySelector('.ink-color-tool')
 inkColorTool.addEventListener('change', (e) => {
   console.log(e.target.value)
   setInkColor(e.target.value);
+})
+
+// Resizer tool
+const resizerTool = document.querySelector('.js-resizer-tool');
+const resizerButton = document.querySelector('.js-resizer-button');
+
+resizerTool.addEventListener('input', (e) => {
+  const sizeTextValue = document.querySelector('.js-resizer-text-value')
+  const value = Number(e.target.value);
+
+  sizeTextValue.textContent = value;
+  setSize(value)
+})
+
+resizerButton.addEventListener('click', (e) => {
+  const gridSize = getSize()
+  const cells = generateBoard(gridSize);
+  uiClearContent(gridContainer);
+  render(gridContainer, cells)
 })
 
 const createCell = () => {
