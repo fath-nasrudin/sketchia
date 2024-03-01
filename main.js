@@ -70,7 +70,7 @@ penButton.addEventListener('click', (e) => {
 })
 eraserButton.addEventListener('click', (e) => {
   setInkColor('transparent');
-  document.body.style.cursor = `url(${eraserIcon}), progress`;
+  gridContainer.style.cursor = `url(${eraserIcon}), progress`;
 })
 
 const createCell = () => {
