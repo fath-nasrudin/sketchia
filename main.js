@@ -1,3 +1,6 @@
+const penIcon = './images/cursors/pencil-16.png';
+const eraserIcon = './images/cursors/eraser-16.png';
+
 // ink color variables and functions
 let inkColor = '#000';
 const getInkColor = () => inkColor;
@@ -55,6 +58,19 @@ resizerButton.addEventListener('click', (e) => {
   const cells = generateBoard(gridSize);
   uiClearContent(gridContainer);
   render(gridContainer, cells)
+})
+
+// pen and eraser tool
+const penButton = document.querySelector('.js-pen-button');
+const eraserButton = document.querySelector('.js-eraser-button');
+penButton.addEventListener('click', (e) => {
+  const inkColorTool = document.querySelector('.ink-color-tool');
+  setInkColor(inkColorTool.value);
+  gridContainer.style.cursor = `url(${penIcon}), progress`;
+})
+eraserButton.addEventListener('click', (e) => {
+  setInkColor('transparent');
+  document.body.style.cursor = `url(${eraserIcon}), progress`;
 })
 
 const createCell = () => {
