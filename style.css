@@ -141,3 +141,18 @@ body {
 }
 
 /* ========== COMPONENTS END ========== */
+
+/* ========== UTILITIES ========== */
+
+/* ===== Flex Utilities ===== */
+.flex {
+  display: flex;
+  gap: 16px;
+}
+
+.flex-col {
+  display: flex;
+  gap: 16px;
+}
+
+/* ========== UTILITIES END ========== */
